@@ -2,12 +2,14 @@ import React from "react";
 import { Tabs } from "expo-router";
 import { StyleSheet, View, Platform } from "react-native";
 import { BlurView } from "expo-blur";
-import { Home, Activity, UtensilsCrossed, User } from "lucide-react-native";
+import {
+  Home,
+  Activity,
+  UtensilsCrossed,
+  User,
+  Sparkles,
+} from "lucide-react-native";
 
-/**
- * Bottom tab navigation with a BlurView background to match the
- * glassmorphism aesthetic defined in design_guidelines.json.
- */
 export default function TabsLayout() {
   return (
     <Tabs
@@ -17,7 +19,7 @@ export default function TabsLayout() {
         tabBarInactiveTintColor: "#6B7280",
         tabBarShowLabel: true,
         tabBarLabelStyle: {
-          fontSize: 11,
+          fontSize: 10,
           fontWeight: "600",
           letterSpacing: 0.5,
           marginTop: -2,
@@ -59,6 +61,15 @@ export default function TabsLayout() {
           title: "Diet",
           tabBarIcon: ({ color, size }) => (
             <UtensilsCrossed color={color} size={size - 2} strokeWidth={2.2} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="coach"
+        options={{
+          title: "Coach",
+          tabBarIcon: ({ color, size }) => (
+            <Sparkles color={color} size={size - 2} strokeWidth={2.2} />
           ),
         }}
       />
