@@ -1,0 +1,119 @@
+{
+  "theme": "Dark",
+  "archetype": "Archetype 5: Jewel & Luxury (Premium Glassmorphism Variant)",
+  "color_palette": {
+    "background_base": "#05050A",
+    "gradient_glow_primary": "#4F46E5",
+    "gradient_glow_secondary": "#7C3AED",
+    "card_glass": "rgba(255, 255, 255, 0.03)",
+    "card_border": "rgba(255, 255, 255, 0.08)",
+    "text_primary": "#FFFFFF",
+    "text_secondary": "#A1A1AA",
+    "accent_success": "#10B981",
+    "accent_energy": "#F43F5E",
+    "bottom_nav_bg": "rgba(5, 5, 10, 0.85)"
+  },
+  "typography": {
+    "heading_font": "Outfit, System",
+    "body_font": "Manrope, System",
+    "h1": {
+      "fontSize": 36,
+      "fontWeight": "800",
+      "letterSpacing": -1
+    },
+    "h2": {
+      "fontSize": 24,
+      "fontWeight": "700",
+      "letterSpacing": -0.5
+    },
+    "body": {
+      "fontSize": 16,
+      "fontWeight": "400",
+      "color": "#A1A1AA"
+    },
+    "label": {
+      "fontSize": 12,
+      "fontWeight": "600",
+      "letterSpacing": 1.5,
+      "textTransform": "uppercase"
+    }
+  },
+  "glassmorphism_rules": {
+    "card_background": "rgba(255, 255, 255, 0.04)",
+    "card_border_radius": 24,
+    "card_border_width": 1,
+    "card_border_color": "rgba(255, 255, 255, 0.1)",
+    "blur_instruction": "Use expo-blur `BlurView` with tint='dark' and intensity={30} as the absolute background of cards",
+    "shadow": {
+      "shadowColor": "#000",
+      "shadowOffset": { "width": 0, "height": 8 },
+      "shadowOpacity": 0.3,
+      "shadowRadius": 24,
+      "elevation": 5
+    }
+  },
+  "layout_and_spacing": {
+    "screen_padding": 24,
+    "card_gap": 16,
+    "inner_card_padding": 20,
+    "safe_area_padding": true
+  },
+  "screens": {
+    "home_dashboard": {
+      "greeting": "Good Morning, User",
+      "elements": [
+        "Steps: 6540",
+        "Calories: 320 kcal",
+        "Water: 2.5L"
+      ],
+      "layout_rules": "Bento grid style using Flexbox. 'Steps' should be a wide feature card spanning full width. 'Calories' and 'Water' should sit side-by-side below it. Place subtle, absolute-positioned blurry blobs (gradient_glow_primary & secondary) behind the cards to create the requested blue/purple gradient look without making it look cheap."
+    },
+    "activity_screen": {
+      "elements": [
+        "Running: 30 mins, 3km",
+        "Walking: 45 mins, 4km",
+        "Cycling: 20 mins, 5km"
+      ],
+      "layout_rules": "Vertical list of wide glassmorphism cards. Each card must feature a distinct activity icon (Lucide) and a glowing progress bar (use expo-linear-gradient for the bar fill)."
+    },
+    "diet_screen": {
+      "elements": [
+        "Breakfast: Calories, Protein, Carbs, Fat",
+        "Lunch: Calories, Protein, Carbs, Fat",
+        "Dinner: Calories, Protein, Carbs, Fat"
+      ],
+      "layout_rules": "Vertical list of image-backed glass cards. Use the provided diet_ images. Images must have a dark gradient overlay (e.g., linear gradient from transparent to rgba(0,0,0,0.9)) so the white text and macro breakdowns at the bottom of the card remain highly legible (WCAG APCA compliant)."
+    },
+    "profile_screen": {
+      "user_data": "John Doe, 175cm, 70kg, Goal: Lose 5kg",
+      "layout_rules": "Center aligned circular profile picture with a subtle border. Bold name below. User stats (height, weight, goal) in a small horizontal flex row. Below that, a settings-style list (Account, Goals, Notifications) using flat, full-width glass rows with right-chevrons."
+    }
+  },
+  "media": {
+    "profile_avatar": {
+      "url": "https://images.unsplash.com/photo-1604071112261-71e084bc6d57?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDN8MHwxfHNlYXJjaHwxfHxhdGhsZXRpYyUyMG1hbiUyMHJ1bm5lciUyMHBvcnRyYWl0JTIwZGFyayUyMGxpZ2h0aW5nfGVufDB8fHx8MTc3NzA1ODIzMHww&ixlib=rb-4.1.0&q=85",
+      "description": "Athletic man portrait for profile screen"
+    },
+    "diet_breakfast": {
+      "url": "https://images.unsplash.com/photo-1714423126086-3c5009fcd09a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDF8MHwxfHNlYXJjaHwxfHxoZWFsdGh5JTIwYnJlYWtmYXN0JTIwb2F0cyUyMGJlcnJpZXMlMjBkYXJrJTIwYmFja2dyb3VuZHxlbnwwfHx8fDE3NzcwNTgyMzB8MA&ixlib=rb-4.1.0&q=85",
+      "description": "Oats and berries for breakfast card background"
+    },
+    "diet_lunch": {
+      "url": "https://images.unsplash.com/photo-1761315600943-d8a5bb0c499f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzF8MHwxfHNlYXJjaHwxfHxoZWFsdGh5JTIwY2hpY2tlbiUyMHNhbGFkJTIwbHVuY2glMjBkYXJrJTIwYmFja2dyb3VuZHxlbnwwfHx8fDE3NzcwNTgyNDB8MA&ixlib=rb-4.1.0&q=85",
+      "description": "Healthy chicken salad for lunch card background"
+    },
+    "diet_dinner": {
+      "url": "https://images.pexels.com/photos/10506640/pexels-photo-10506640.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "description": "Healthy salmon plate for dinner card background"
+    }
+  },
+  "technical_instructions_for_main_agent": [
+    "Since this is a React Native (Expo) app, DO NOT attempt to use HTML/CSS elements like 'div' or 'span'. Use standard RN components: View, Text, ScrollView, Image, etc.",
+    "Implement the UI using either NativeWind (if you prefer Tailwind) or standard StyleSheet.create().",
+    "For the requested 'blue/purple gradient', DO NOT use a single flat linear gradient background for the whole app. Instead, set the main background to deep dark (#05050A) and position large, blurred absolute Views with primary and secondary glow colors behind the main content. This creates a high-end ambient 'Crystal Glass' effect rather than a cheap UI look.",
+    "Use `expo-blur` for all glassmorphism cards. Ensure they have a 1px `rgba(255,255,255,0.1)` border. Do not make them fully transparent.",
+    "Use `@react-navigation/bottom-tabs` for navigation. The bottom tab bar should also have a BlurView background to match the glassmorphism aesthetic.",
+    "Use `lucide-react-native` for icons.",
+    "CRITICAL: Add `testID` attributes to all interactive and key informational elements (e.g., `testID='steps-card'`, `testID='profile-avatar'`, etc.) for testing."
+  ]
+}
